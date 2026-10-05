@@ -4,67 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lugar de Avivamiento Oviedo</title>
-
-    <meta name="description" content="Iglesia cristiana en Oviedo. Cultos, oración, enseñanza bíblica y comunidad.">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <!-- MENÚ -->
+    <!-- NAV -->
     <nav class="navbar">
-        <div class="logo">Lugar de Avivamiento</div>
+        <div class="logo">Lugar de Avivamiento Oviedo</div>
         <ul class="nav-links">
             <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#quienes">Quiénes somos</a></li>
-            <li><a href="#cultos">Horarios</a></li>
+            <li><a href="#domingos">Domingos</a></li>
+            <li><a href="#miercoles">Miércoles</a></li>
+            <li><a href="#viernes">Viernes</a></li>
             <li><a href="#galeria">Galería</a></li>
             <li><a href="#videos">Videos</a></li>
             <li><a href="#contacto">Contacto</a></li>
-            <li><a href="#registro">Registro</a></li>
+            <li><a href="#ubicacion">Ubicación</a></li>
         </ul>
     </nav>
 
     <!-- INICIO -->
-    <header id="inicio" class="hero">
-        <div class="overlay"></div>
-        <h1>Lugar de Avivamiento Oviedo</h1>
-        <p class="verse">“Los que esperan en Jehová tendrán nuevas fuerzas…” – Isaías 40:31</p>
-        <a href="#cultos" class="btn">Visítanos</a>
-    </header>
-
-    <!-- QUIÉNES SOMOS -->
-    <section id="quienes" class="section">
-        <h2>Quiénes somos</h2>
-        <p>Somos una iglesia cristiana dedicada a compartir el amor de Dios, restaurar vidas y formar discípulos. Creemos en el poder del Espíritu Santo para transformar corazones.</p>
+    <section id="inicio" class="carousel full">
+        <div class="slides">
+            <img src="foto1.jpg">
+            <img src="foto2.jpg">
+            <img src="foto3.jpg">
+        </div>
     </section>
 
-    <!-- HORARIOS -->
-    <section id="cultos" class="section">
-        <h2>Horarios</h2>
-        <ul>
-            <li><strong>Domingo:</strong> 17:00</li>
-            <li><strong>Miércoles:</strong> 20:00</li>
-            <li><strong>Viernes:</strong> 19:00</li>
-        </ul>
+    <!-- DOMINGOS -->
+    <section id="domingos" class="section">
+        <h2>Domingos – Reunión Familiar</h2>
+        <p>Cada domingo vivimos un encuentro sobrenatural con Dios.</p>
+        <p><strong>Horario:</strong> Domingo 17:00 h</p>
+
+        <div class="carousel">
+            <div class="slides">
+                <img src="domingo1.jpg">
+                <img src="domingo2.jpg">
+                <img src="domingo3.jpg">
+            </div>
+        </div>
+    </section>
+
+    <!-- MIÉRCOLES -->
+    <section id="miercoles" class="section">
+        <h2>Miércoles – Café con Jesús</h2>
+        <p>Un café, una palabra, una sonrisa. Compartimos el amor de Cristo en cada conversación.</p>
+        <p><strong>Horario:</strong> Miércoles 20:00 h</p>
+
+        <div class="carousel">
+            <div class="slides">
+                <img src="miercoles1.jpg">
+                <img src="miercoles2.jpg">
+                <img src="miercoles3.jpg">
+            </div>
+        </div>
+    </section>
+
+    <!-- VIERNES -->
+    <section id="viernes" class="section">
+        <h2>Viernes – Reunión Juvenil</h2>
+        <p>Jóvenes encendidos por el fuego del Espíritu.</p>
+        <p><strong>Horario:</strong> Viernes 19:00 h</p>
+
+        <div class="carousel">
+            <div class="slides">
+                <img src="viernes1.jpg">
+                <img src="viernes2.jpg">
+                <img src="viernes3.jpg">
+            </div>
+        </div>
     </section>
 
     <!-- GALERÍA -->
     <section id="galeria" class="section">
         <h2>Galería</h2>
-        <p>Pronto agregaremos fotos de nuestros cultos, actividades y eventos.</p>
-        <div class="galeria-grid">
-            <!-- Aquí podrás agregar fotos -->
+        <div class="grid">
+            <img src="gal1.jpg">
+            <img src="gal2.jpg">
+            <img src="gal3.jpg">
+            <img src="gal4.jpg">
+            <img src="gal5.jpg">
+            <img src="gal6.jpg">
         </div>
     </section>
 
     <!-- VIDEOS -->
     <section id="videos" class="section">
         <h2>Videos</h2>
-        <p>Pronto agregaremos videos de predicaciones, alabanzas y testimonios.</p>
-        <div class="video-grid">
-            <!-- Aquí podrás agregar videos -->
-        </div>
+        <p>Pronto agregaremos videos de predicaciones y alabanzas.</p>
     </section>
 
     <!-- CONTACTO -->
@@ -72,39 +102,35 @@
         <h2>Contacto</h2>
 
         <form class="formulario">
-            <input type="text" placeholder="Tu nombre" required>
-            <input type="email" placeholder="Tu correo" required>
-            <textarea placeholder="Tu mensaje o duda" required></textarea>
-            <button type="submit">Enviar mensaje</button>
+            <input type="text" placeholder="Tu nombre completo" required>
+            <input type="email" placeholder="Tu correo electrónico" required>
+            <input type="tel" placeholder="Tu número de teléfono" required>
+            <textarea placeholder="Tu mensaje o petición de oración" required></textarea>
+            <button type="submit">Enviar</button>
         </form>
 
         <div class="social">
-            <a href="https://www.facebook.com/share/1SAzadiKfU/" class="icon fb">Facebook</a>
-            <a href="https://www.tiktok.com/@lugardeavivamiento_?_r=1&_t=ZG-9AJ25EReC8G" class="icon tk">TikTok</a>
-            <a href="https://www.instagram.com/lugardeavivamiento.acla" class="icon ig">Instagram</a>
-            <a href="#" class="icon wa">WhatsApp</a>
+            <a href="https://www.facebook.com/share/1SAzadiKfU/" target="_blank">Facebook</a>
+            <a href="https://www.tiktok.com/@lugardeavivamiento_?_r=1&_t=ZG-9AJ25EReC8G" target="_blank">TikTok</a>
+            <a href="https://www.instagram.com/lugardeavivamiento.acla" target="_blank">Instagram</a>
+            <a href="mailto:cruzadacristianaoviedoespana@gmail.com">Correo</a>
         </div>
     </section>
 
-    <!-- REGISTRO ESPIRITUAL -->
-    <section id="registro" class="section">
-        <h2>¿Quieres conocer más de Dios?</h2>
-        <p>Si deseas hablar con nosotros, recibir oración o aprender más, puedes registrarte aquí.</p>
+    <!-- UBICACIÓN -->
+    <section id="ubicacion" class="section">
+        <h2>Ubicación</h2>
+        <p>Calle Tito Bustillo 2 bajo A, Oviedo – Asturias</p>
 
-        <form class="formulario">
-            <input type="text" placeholder="Tu nombre completo" required>
-            <input type="email" placeholder="Tu correo" required>
-            <input type="tel" placeholder="Tu número de teléfono" required>
-            <textarea placeholder="Cuéntanos cómo podemos ayudarte"></textarea>
-            <button type="submit">Registrarme</button>
-        </form>
+        <iframe 
+            src="https://www.google.com/maps?q=Calle%20Tito%20Bustillo%202%20Oviedo&output=embed"
+            width="100%" height="350" style="border:0;" allowfullscreen="">
+        </iframe>
     </section>
 
     <footer>
-        <p>© 2026 Lugar de Avivamiento Oviedo – Asociación Cristiana</p>
+        <p>© 2026 Lugar de Avivamiento Oviedo</p>
     </footer>
 
 </body>
 </html>
-
-
