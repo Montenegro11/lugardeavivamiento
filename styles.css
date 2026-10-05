@@ -66,7 +66,7 @@ h2 {
 
 .slides {
     display: flex;
-    animation: slide 15s infinite;
+    animation: slide 20s infinite;
 }
 
 .slides img {
@@ -77,8 +77,10 @@ h2 {
 
 @keyframes slide {
     0% { transform: translateX(0); }
-    33% { transform: translateX(-100%); }
-    66% { transform: translateX(-200%); }
+    20% { transform: translateX(-100%); }
+    40% { transform: translateX(-200%); }
+    60% { transform: translateX(-300%); }
+    80% { transform: translateX(-400%); }
     100% { transform: translateX(0); }
 }
 
