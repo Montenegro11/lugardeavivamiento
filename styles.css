@@ -1,32 +1,26 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #111;
-    color: white;
+    font-family: 'Poppins', sans-serif;
+    background: white;
+    color: #333;
 }
 
-/* MENÚ */
+/* NAV */
 .navbar {
+    background: white;
+    border-bottom: 2px solid gold;
+    padding: 15px 30px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    background: rgba(0,0,0,0.8);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 10;
-    transition: 0.3s;
 }
 
-.navbar:hover {
-    background: rgba(0,0,0,0.95);
-}
-
-.navbar .logo {
-    font-size: 1.3rem;
+.logo {
     font-weight: bold;
-    color: #ff6600;
+    color: gold;
 }
 
 .nav-links {
@@ -36,119 +30,120 @@ body {
 }
 
 .nav-links a {
-    color: white;
     text-decoration: none;
+    color: #333;
     font-weight: bold;
 }
 
 .nav-links a:hover {
-    color: #ff6600;
+    color: gold;
 }
 
-/* HERO */
-.hero {
-    height: 100vh;
-    background: url('fuego.jpg') no-repeat center center/cover;
-    position: relative;
-    text-align: center;
-    padding-top: 200px;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-}
-
-h1 {
-    font-size: 3rem;
-    position: relative;
-    z-index: 2;
-}
-
-.verse {
-    font-size: 1.2rem;
-    margin-top: 10px;
-    position: relative;
-    z-index: 2;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
-    background: #ff6600;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    position: relative;
-    z-index: 2;
-}
-
-/* SECCIONES */
+/* SECTIONS */
 .section {
     padding: 80px 20px;
-    background: #222;
-    margin-top: 20px;
+    margin-top: 60px;
 }
 
 h2 {
-    color: #ff6600;
+    color: gold;
+    text-align: center;
 }
 
-/* FORMULARIOS */
+/* CAROUSEL */
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    border: 2px solid gold;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.carousel.full {
+    border: none;
+    border-radius: 0;
+}
+
+.slides {
+    display: flex;
+    animation: slide 15s infinite;
+}
+
+.slides img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+/* GALERÍA */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.grid img {
+    width: 100%;
+    border: 2px solid gold;
+    border-radius: 10px;
+}
+
+/* FORMULARIO */
 .formulario {
+    max-width: 400px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    max-width: 400px;
+    border: 2px solid gold;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .formulario input,
 .formulario textarea {
     padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    border: none;
 }
 
 .formulario button {
-    padding: 12px;
-    background: #ff6600;
-    color: white;
+    background: gold;
     border: none;
-    border-radius: 5px;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background: #ffdd55;
+}
+
+/* SOCIAL */
+.social {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: gold;
     font-weight: bold;
 }
 
-/* ICONOS */
-.social {
-    margin-top: 20px;
-}
-
-.icon {
-    display: inline-block;
-    margin-right: 15px;
-    padding: 10px 15px;
-    background: #ff6600;
-    border-radius: 5px;
+/* FOOTER */
+footer {
+    background: gold;
     color: white;
-    text-decoration: none;
-}
-
-/* GALERÍA */
-.galeria-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-}
-
-/* VIDEOS */
-.video-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 15px;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
 }
