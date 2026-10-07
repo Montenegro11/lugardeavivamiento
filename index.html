@@ -1244,6 +1244,22 @@ footer {
     );
   color: #ffffff;
 }
+/* =========================
+   HEADER OCULTO AL SCROLL
+   ========================= */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+header.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+}
 
   </style>
 </head>
@@ -1955,6 +1971,22 @@ footer {
     if (!getCookie('lav_cookies')) {
       document.getElementById('cookie-banner').style.display = 'block';
     }
+  let lastScroll = 0;
+  const header = document.querySelector("header");
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > lastScroll && currentScroll > 100) {
+      // Oculta el header al bajar
+      header.classList.add("hidden");
+    } else {
+      // Muestra el header al subir o volver al inicio
+      header.classList.remove("hidden");
+    }
+
+    lastScroll = currentScroll;
+  });
   </script>
 </body>
 </html>
