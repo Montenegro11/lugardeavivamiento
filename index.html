@@ -988,6 +988,263 @@
       outline: 2px solid var(--accent-gold);
       outline-offset: 2px;
     }
+/* =========================
+   BASE & SCROLL
+   ========================= */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: radial-gradient(circle at top, #f7f9ff 0, #eef2ff 40%, #ffffff 100%);
+}
+
+/* =========================
+   SECCIONES & CONTENEDORES
+   ========================= */
+.section {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-header {
+  transform: translateY(10px);
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section.in-view .section-header {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card,
+.gallery-grid img,
+.contact-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+}
+
+/* =========================
+   HERO & PARALLAX SUAVE
+   ========================= */
+.hero {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-inner {
+  transform: translateY(10px);
+  opacity: 0;
+  animation: heroFadeIn 1s ease forwards;
+}
+
+@keyframes heroFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   BOTONES
+   ========================= */
+.btn-primary,
+.btn-secondary {
+  position: relative;
+  overflow: hidden;
+  transform: translateY(0);
+  transition: transform 0.2s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.btn-primary::after,
+.btn-secondary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.35), transparent 60%);
+  opacity: 0;
+  transform: translateX(-40%);
+  transition: opacity 0.25s ease, transform 0.35s ease;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0, 82, 204, 0.25);
+}
+
+.btn-primary:hover::after,
+.btn-secondary:hover::after {
+  opacity: 1;
+  transform: translateX(40%);
+}
+
+/* =========================
+   NAV & HEADER
+   ========================= */
+.header-inner {
+  backdrop-filter: blur(16px);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.9), rgba(230, 238, 255, 0.9));
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.nav a {
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #0052cc, #f5b544);
+  transition: width 0.25s ease;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   LOGO
+   ========================= */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-logo img {
+  width: 80px;
+  height: auto;
+  filter: drop-shadow(0 4px 10px rgba(0, 59, 153, 0.35));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.brand-logo img:hover {
+  transform: translateY(-2px) scale(1.03);
+  filter: drop-shadow(0 8px 18px rgba(0, 59, 153, 0.45));
+}
+
+/* =========================
+   GALERÍA & IMÁGENES
+   ========================= */
+.gallery-grid img {
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.gallery-grid img:hover {
+  transform: translateY(-4px) scale(1.01);
+}
+
+/* =========================
+   FORMULARIO
+   ========================= */
+.contact-card {
+  backdrop-filter: blur(18px);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(230, 238, 255, 0.96));
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.form-input,
+.form-textarea {
+  transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.15s ease;
+}
+
+.form-input:focus-visible,
+.form-textarea:focus-visible {
+  border-color: #0052cc;
+  box-shadow: 0 0 0 1px rgba(0, 82, 204, 0.35), 0 10px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
+}
+
+/* =========================
+   MICRO-INTERACCIONES
+   ========================= */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.14);
+}
+
+footer {
+  background: radial-gradient(circle at top, #001b4d 0, #000814 60%);
+}
+/* ============================================================
+   FONDO PREMIUM — CIELO AZUL SUAVE + CRISTAL
+   ============================================================ */
+
+body {
+  background: linear-gradient(
+      180deg,
+      #f9fbff 0%,
+      #eef3ff 35%,
+      #e6ecff 60%,
+      #ffffff 100%
+    );
+  color: var(--text-primary);
+  background-attachment: fixed;
+}
+
+/* Luz suave en el fondo */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 255, 255, 0.55) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(255, 255, 255, 0.35) 0%,
+      transparent 70%
+    );
+  opacity: 0.7;
+}
+
+/* Paneles cristal */
+.section {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(18px);
+  border-radius: 18px;
+  padding: 40px;
+  margin-bottom: 60px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.06);
+}
+
+/* Hero con profundidad */
+.hero {
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.7) 0%,
+      rgba(240, 244, 255, 0.8) 40%,
+      rgba(230, 236, 255, 0.9) 100%
+    ),
+    url('tu-imagen-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Footer elegante */
+footer {
+  background: linear-gradient(
+      180deg,
+      #001b4d 0%,
+      #000a1f 60%,
+      #000814 100%
+    );
+  color: #ffffff;
+}
+
   </style>
 </head>
 <body>
