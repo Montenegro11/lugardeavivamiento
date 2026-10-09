@@ -1,29 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
-    <loc>https://TU-USUARIO.github.io/lugardeavivamiento/</loc>
-    <priority>1.0</priority>
+    <loc>https://iccavivamiento.com/</loc>
+    <priority>1.00</priority>
   </url>
-
   <url>
-    <loc>https://TU-USUARIO.github.io/lugardeavivamiento/#quienes-somos</loc>
-    <priority>0.8</priority>
+    <loc>https://iccavivamiento.com/#about</loc>
   </url>
-
   <url>
-    <loc>https://TU-USUARIO.github.io/lugardeavivamiento/#cultos</loc>
-    <priority>0.8</priority>
+    <loc>https://iccavivamiento.com/#meetings</loc>
   </url>
-
   <url>
-    <loc>https://TU-USUARIO.github.io/lugardeavivamiento/#ubicacion</loc>
-    <priority>0.8</priority>
+    <loc>https://iccavivamiento.com/#gallery</loc>
   </url>
-
   <url>
-    <loc>https://TU-USUARIO.github.io/lugardeavivamiento/#contacto</loc>
-    <priority>0.8</priority>
+    <loc>https://iccavivamiento.com/#verses</loc>
   </url>
-
+  <url>
+    <loc>https://iccavivamiento.com/#contact</loc>
+  </url>
 </urlset>
