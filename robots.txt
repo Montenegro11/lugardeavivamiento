@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://TU-USUARIO.github.io/lugardeavivivamiento/sitemap.xml
+Sitemap: https://iccavivamiento.com/sitemap.xml
